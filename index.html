@@ -93,6 +93,13 @@ section[id]{scroll-margin-top:104px}
 .logo{display:inline-flex;align-items:center;text-decoration:none;flex:none;line-height:0}
 .logo img{height:50px;width:auto}
 @media(min-width:1100px){.logo img{height:66px}}
+.logo .lg-d{display:none}
+@media(max-width:1099px){
+  .nav{background:#0B1626;box-shadow:0 1px 0 #1B2B47}
+  .nav.solid{box-shadow:0 4px 18px rgba(0,0,0,.45)}
+  .logo .lg-l{display:none}
+  .logo .lg-d{display:block}
+}
 .nav-links{display:none;align-items:center;gap:2px;list-style:none;padding:0;margin:0;flex-wrap:nowrap}
 @media(min-width:1100px){.nav-links{display:flex}}
 .nav-links > li{position:relative;display:flex;align-items:center}
@@ -133,10 +140,10 @@ section[id]{scroll-margin-top:104px}
 @media(min-width:900px){.hero .wrap{max-width:none;padding-inline:clamp(28px,4.5vw,84px)}}
 .hero-txt{max-width:640px;padding:clamp(48px,6vw,90px) 0}
 .hero-div{width:64px;height:3px;background:var(--red);border-radius:2px;margin:20px 0 0}
-.hero-mob{display:none}
+.hero-mob,.hero-towers{display:none}
 .hero-txt h1{font-family:var(--head);font-weight:800;font-stretch:110%;text-transform:uppercase;line-height:1.06;letter-spacing:.005em;color:#fff;font-size:clamp(1.5rem,1rem + 2.3vw,2.8rem);white-space:nowrap}
 .hero-txt h1 em,.hero-txt h1 small{white-space:normal}
-@media(max-width:349px){.hero-txt h1{font-size:1.3rem}}
+@media(max-width:349px){.hero-txt h1{font-size:1.8rem}}
 .hero-txt h1 em{font-style:normal;color:var(--red);display:block;font-size:1.18em}
 .hero-txt h1 small{display:block;font-size:.52em;font-weight:800;letter-spacing:.04em;margin-top:6px}
 .hero-sub{color:#C4CEDF;max-width:44ch;margin:20px 0 28px;font-size:15.5px}
@@ -144,7 +151,11 @@ section[id]{scroll-margin-top:104px}
 @media(max-width:899px){
   .hero{display:block;background:linear-gradient(178deg,#13233E 0%,#0D1930 55%,#0A1524 100%)}
   .hero-bg,.hero::after{display:none}
-  .hero-txt{padding:36px 0 26px;max-width:100%}
+  .hero .wrap{position:relative;overflow:hidden}
+  .hero-towers{display:block;position:absolute;top:0;right:calc(-1 * clamp(18px,4vw,48px));height:100%;width:62%;object-fit:cover;object-position:center top;z-index:0}
+  .hero .wrap::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0C1828 26%,rgba(12,24,40,.62) 52%,rgba(12,24,40,.08) 100%)}
+  .hero-txt{position:relative;z-index:2;padding:36px 0 26px;max-width:100%}
+  .hero-txt h1{white-space:normal;font-size:2rem;line-height:1.08}
   .hero-ctas{flex-direction:column;align-items:flex-start}
   .hero-ctas .btn{width:min(340px,100%)}
   .hero-mob{display:block;width:100%;height:auto}
@@ -320,7 +331,8 @@ section[id]{scroll-margin-top:104px}
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="logo" href="#home" aria-label="SKS Hardware — home">
-      <img src="assets/img/logo-lockup.jpg" width="534" height="296" alt="SKS Hardware — Industrial Valves &amp; Hardware Supplier">
+      <img class="lg-l" src="assets/img/logo-lockup.jpg" width="534" height="296" alt="SKS Hardware — Industrial Valves &amp; Hardware Supplier">
+      <img class="lg-d" src="assets/img/logo-dark.jpg" width="534" height="296" alt="SKS Hardware — Industrial Valves &amp; Hardware Supplier">
     </a>
     <ul class="nav-links">
       <li><a class="top active" href="#home" data-spy="home">Home</a></li>
@@ -375,8 +387,9 @@ section[id]{scroll-margin-top:104px}
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <img class="hero-bg" src="assets/img/hero-banner.jpg" width="1400" height="800" alt="" fetchpriority="high">
+  <img class="hero-bg" src="assets/img/hero-banner.jpg" width="1920" height="720" alt="" fetchpriority="high">
   <div class="wrap">
+    <img class="hero-towers" src="assets/img/hero-towers.jpg" width="430" height="602" alt="" aria-hidden="true">
     <div class="hero-txt">
       <h1>Reliable Industrial <em>Solutions</em> <small>For Every Industry.</small></h1>
       <div class="hero-div" aria-hidden="true"></div>
