@@ -129,8 +129,10 @@ section[id]{scroll-margin-top:104px}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%;z-index:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(11,22,42,.96) 0%,rgba(11,22,42,.87) 30%,rgba(11,22,42,.38) 52%,rgba(11,22,42,0) 68%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
-.hero-txt{max-width:600px;padding:clamp(56px,8vw,116px) 0}
-.hero-txt h1{font-family:var(--head);font-weight:800;font-stretch:110%;text-transform:uppercase;line-height:1.04;letter-spacing:.005em;color:#fff;font-size:clamp(2rem,4.6vw,3.4rem)}
+.hero-txt{max-width:640px;padding:clamp(56px,8vw,116px) 0}
+.hero-txt h1{font-family:var(--head);font-weight:800;font-stretch:110%;text-transform:uppercase;line-height:1.06;letter-spacing:.005em;color:#fff;font-size:clamp(1.5rem,1rem + 2.3vw,2.8rem);white-space:nowrap}
+.hero-txt h1 em,.hero-txt h1 small{white-space:normal}
+@media(max-width:349px){.hero-txt h1{font-size:1.3rem}}
 .hero-txt h1 em{font-style:normal;color:var(--red);display:block;font-size:1.18em}
 .hero-txt h1 small{display:block;font-size:.52em;font-weight:800;letter-spacing:.04em;margin-top:6px}
 .hero-sub{color:#C4CEDF;max-width:44ch;margin:22px 0 30px;font-size:15.5px}
