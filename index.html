@@ -48,7 +48,7 @@ section[id]{scroll-margin-top:104px}
 .sec-sub{text-align:center;color:var(--muted);max-width:62ch;margin:14px auto 0;font-size:15px}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--head);font-weight:700;font-stretch:105%;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;padding:15px 26px;border-radius:4px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .1s;min-height:48px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--head);font-weight:700;font-stretch:105%;font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;padding:15px 26px;border-radius:4px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .1s;min-height:48px;white-space:nowrap;flex:none}
 .btn:active{transform:translateY(1px)}
 .btn .ar{transition:transform .25s var(--ease);font-family:var(--body)}
 .btn:hover .ar{transform:translateX(4px)}
@@ -82,19 +82,19 @@ section[id]{scroll-margin-top:104px}
 .topbar .social a:hover{opacity:1;color:#FF6B7E}
 .topbar .social svg{width:15px;height:15px;fill:currentColor}
 .topbar .item.em{display:none}
-@media(min-width:1040px){.topbar{display:block}}
+@media(min-width:1100px){.topbar{display:block}}
 @media(min-width:1280px){.topbar .item.em{display:inline-flex}}
 
 /* ============ NAV ============ */
 .nav{position:sticky;top:0;z-index:100;background:var(--white);box-shadow:0 1px 0 var(--line);transition:box-shadow .25s}
 .nav.solid{box-shadow:0 4px 18px rgba(19,36,65,.10)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:70px}
-@media(min-width:1040px){.nav .wrap{height:88px}}
+@media(min-width:1100px){.nav .wrap{height:88px}}
 .logo{display:inline-flex;align-items:center;text-decoration:none;flex:none;line-height:0}
 .logo img{height:50px;width:auto}
-@media(min-width:1040px){.logo img{height:66px}}
+@media(min-width:1100px){.logo img{height:66px}}
 .nav-links{display:none;align-items:center;gap:2px;list-style:none;padding:0;margin:0;flex-wrap:nowrap}
-@media(min-width:1040px){.nav-links{display:flex}}
+@media(min-width:1100px){.nav-links{display:flex}}
 .nav-links > li{position:relative;display:flex;align-items:center}
 .nav-links a.top{display:inline-flex;align-items:center;gap:5px;font-family:var(--head);font-weight:700;font-stretch:104%;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--navy);text-decoration:none;padding:10px 8px;position:relative;white-space:nowrap;line-height:1.2}
 @media(min-width:1280px){.nav-links a.top{font-size:12.5px;letter-spacing:.07em;padding:10px 11px}}
@@ -107,9 +107,9 @@ section[id]{scroll-margin-top:104px}
 .dd a{display:block;padding:9px 18px;font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none}
 .dd a:hover{background:var(--tint);color:var(--red)}
 .nav-cta{display:none}
-@media(min-width:1040px){.nav-cta{display:inline-flex;padding:13px 22px;min-height:44px}}
+@media(min-width:1100px){.nav-cta{display:inline-flex;padding:13px 22px;min-height:44px}}
 .burger{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:10px;border:0;background:none;cursor:pointer}
-@media(min-width:1040px){.burger{display:none}}
+@media(min-width:1100px){.burger{display:none}}
 .burger i{display:block;height:3px;border-radius:2px;background:var(--red)}
 /* mobile menu */
 .menu{position:fixed;inset:0;background:var(--white);z-index:150;display:flex;flex-direction:column;padding:18px clamp(18px,4vw,48px);transform:translateX(105%);transition:transform .35s var(--ease);overflow-y:auto}
@@ -282,7 +282,8 @@ section[id]{scroll-margin-top:104px}
 .fcols ul a{text-decoration:none;color:#AFBDD6}
 .fcols ul a:hover{color:#FF6B7E}
 .fbottom{border-top:1px solid #1D3050;padding:18px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#7E90B0}
-.fbottom .credit b{color:#fff;font-weight:600}
+.fbottom .credit a{color:#fff;font-weight:600;text-decoration:none}
+.fbottom .credit a:hover{color:#FF6B7E}
 
 /* ============ WHATSAPP FAB ============ */
 .wa-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:130;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .2s var(--ease),box-shadow .2s}
@@ -622,7 +623,7 @@ section[id]{scroll-margin-top:104px}
     <div class="fbottom">
       <span>© 2026 SKS Hardware, Chennai. All rights reserved.</span>
       <span>Authorised: L&amp;T Valves · Pneutork · Zoloto Valves</span>
-      <span class="credit">Designed &amp; developed by <b>Vametrix</b></span>
+      <span class="credit">Designed &amp; developed by <a href="https://vametrix.com" target="_blank" rel="noopener">Vametrix</a></span>
     </div>
   </div>
 </footer>
