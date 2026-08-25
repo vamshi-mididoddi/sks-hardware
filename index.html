@@ -127,7 +127,7 @@ section[id]{scroll-margin-top:104px}
 /* ============ HERO ============ */
 .hero{background:var(--navy-deep) linear-gradient(115deg,#0E1B30 0%,#13233C 55%,#0E1B30 100%);color:#fff;overflow:hidden}
 .hero .wrap{display:grid;gap:0;align-items:stretch}
-@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr}}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1fr 1.15fr}}
 .hero-txt{padding:clamp(44px,6vw,86px) 0;align-self:center}
 .hero-txt h1{font-family:var(--head);font-weight:800;font-stretch:110%;text-transform:uppercase;line-height:1.04;letter-spacing:.005em;color:#fff;font-size:clamp(2rem,4.6vw,3.4rem)}
 .hero-txt h1 em{font-style:normal;color:var(--red);display:block;font-size:1.18em}
@@ -135,13 +135,13 @@ section[id]{scroll-margin-top:104px}
 .hero-sub{color:#C4CEDF;max-width:44ch;margin:22px 0 30px;font-size:15.5px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hero-fig{position:relative;min-height:300px}
-.hero-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.hero-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 @media(min-width:900px){
   .hero-fig{margin-right:calc(-1 * clamp(18px,4vw,48px))}
   .hero-fig::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0E1B30 0%,rgba(14,27,48,0) 22%)}
 }
 @media(max-width:899px){
-  .hero-fig{min-height:340px;margin-inline:calc(-1 * clamp(18px,4vw,48px))}
+  .hero-fig{min-height:0;aspect-ratio:950/508;margin-inline:calc(-1 * clamp(18px,4vw,48px))}
   .hero-txt{padding-bottom:30px}
   .hero-fig::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#0E1B30 0%,rgba(14,27,48,0) 20%)}
 }
@@ -377,7 +377,7 @@ section[id]{scroll-margin-top:104px}
       </div>
     </div>
     <div class="hero-fig">
-      <img src="assets/img/hero-cluster.jpg" width="648" height="750" alt="SKS industrial valves — ball valve, gate valve, butterfly valve with actuator and flange" fetchpriority="high">
+      <img src="assets/img/hero-banner.jpg" width="950" height="508" alt="SKS industrial valves — gate, butterfly and ball valves with flanges against a refinery backdrop" fetchpriority="high">
     </div>
   </div>
 </section>
